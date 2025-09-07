@@ -1,17 +1,18 @@
+// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import { createRoot } from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// 💡 FIX: Uncomment these lines to import and initialize i18n
+import './i18n';
+
+const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* 💡 FIX: The i18n instance is already initialized globally by importing it.
+        You don't need the I18nextProvider. The use() call in i18n.js
+        handles the connection to react-i18next. */}
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

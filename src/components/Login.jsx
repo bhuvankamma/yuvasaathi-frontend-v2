@@ -42,9 +42,13 @@ const Login = () => {
     const payload = isEmailInput ? { email: identifier } : { mobile: identifier };
 
     try {
+<<<<<<< HEAD
       // --- THE CRITICAL FIX IS HERE ---
       // The API call URL must include the /api prefix
       const response = await fetch(`${API_BASE_URL}/api/generate-otp`, {
+=======
+      const response = await fetch(`${API_BASE_URL}/generate-otp`, {
+>>>>>>> cbad5e5d0b4815ce78337f8645a66417b3ea07ff
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,9 +86,13 @@ const Login = () => {
     const payload = isEmailInput ? { email: identifier, otp } : { mobile: identifier, otp };
 
     try {
+<<<<<<< HEAD
       // --- THE CRITICAL FIX IS HERE ---
       // The API call URL must include the /api prefix
       const response = await fetch(`${API_BASE_URL}/api/login`, {
+=======
+      const response = await fetch(`${API_BASE_URL}/login`, {
+>>>>>>> cbad5e5d0b4815ce78337f8645a66417b3ea07ff
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

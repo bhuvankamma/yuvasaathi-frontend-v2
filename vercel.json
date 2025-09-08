@@ -7,18 +7,13 @@
       "config": { "runtime": "python3.9" }
     },
     {
-      "src": "backend/api/index.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "build" }
     }
   ],
   "routes": [
-    { "src": "/api/python/(.*)", "dest": "backend/app.py" },
-    { "src": "/api/node/(.*)", "dest": "backend/api/index.js" },
+    { "src": "/api/(.*)", "dest": "backend/app.py" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

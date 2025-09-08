@@ -21,7 +21,7 @@ import UserDashboardpage from './components/UserDashboardPage';
 
 import './App.css';
 
-// New layout component that includes the Header and Footer
+
 const MainLayout = () => {
   return (
     <>
@@ -37,7 +37,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          {/* Main Layout Route: All nested routes will have the Header and Footer */}
+          
           <Route path="/" element={<MainLayout />}>
             <Route index element={<LandingPage />} />
             <Route path="jobs" element={<JobsSection />} />
@@ -55,7 +55,7 @@ function App() {
             <Route path="SchemeSection" element={<SchemeSection />} />
           </Route>
 
-          {/* User Dashboard Route: This route is outside the MainLayout, so it will not have the Header or Footer */}
+          
           <Route path="/dashboard" element={<UserDashboardpage />} />
            <Route path ="ChatBot"  element={<ChatBot/>}/>
            <Route path ="ResumeBuilder"  element={<ResumeBuilder/>}/>

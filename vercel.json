@@ -4,10 +4,10 @@
     {
       "src": "backend/app.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb" }
+      "config": { "runtime": "python3.9" }
     },
     {
-      "src": "api/index.js",
+      "src": "backend/api/index.js",
       "use": "@vercel/node"
     },
     {
@@ -17,17 +17,8 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/python/(.*)",
-      "dest": "backend/app.py"
-    },
-    {
-      "src": "/api/node/(.*)",
-      "dest": "api/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/api/python/(.*)", "dest": "backend/app.py" },
+    { "src": "/api/node/(.*)", "dest": "backend/api/index.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }

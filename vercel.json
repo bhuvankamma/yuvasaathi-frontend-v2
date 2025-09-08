@@ -3,8 +3,11 @@
   "builds": [
     {
       "src": "backend/app.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.9" }
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
     },
     {
       "src": "package.json",
@@ -13,7 +16,17 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "backend/app.py" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/api/python/(.*)",
+      "dest": "backend/app.py"
+    },
+    {
+      "src": "/api/node/(.*)",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "build/index.html"
+    }
   ]
 }

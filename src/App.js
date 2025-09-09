@@ -16,7 +16,7 @@ import HeroSection from './components/HeroSection';
 import MediaGallary from './components/MediaGallary';
 import SchemeSection from './components/SchemeSection';
 import ChatBot from './components/Chatbot';
-// import ResumeBuilder from './components/ResumeBuilder';
+
 import UserDashboardpage from './components/UserDashboardPage';
 
 import './App.css';
@@ -58,7 +58,7 @@ function App() {
           
           <Route path="/dashboard" element={<UserDashboardpage />} />
            <Route path ="ChatBot"  element={<ChatBot/>}/>
-           {/* <Route path ="ResumeBuilder"  element={<ResumeBuilder/>}/> */}
+        
           {/* 404 Route */}
           <Route path="*" element={<h1>404: Page Not Found</h1>} />
         </Routes>

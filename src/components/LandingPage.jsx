@@ -23,11 +23,6 @@ const LandingPage = () => {
       <MediaGallary/>
       <SchemeSection/>
       <ChatBot/>
-     
-      
-      
-     
-
       </div>
       
       

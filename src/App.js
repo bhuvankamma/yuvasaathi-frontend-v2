@@ -16,7 +16,6 @@ import HeroSection from './components/HeroSection';
 import MediaGallary from './components/MediaGallary';
 import SchemeSection from './components/SchemeSection';
 import ChatBot from './components/Chatbot';
-
 import UserDashboardpage from './components/UserDashboardPage';
 
 import './App.css';

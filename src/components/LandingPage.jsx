@@ -9,7 +9,7 @@ import BenefitsPrograms from './BenefitsPrograms';
 import MediaGallary from './MediaGallary';
 import SchemeSection from './SchemeSection';
 import ChatBot from './Chatbot';
-import ResumeBuilder from './ResumeBuilder';
+// import ResumeBuilder from './ResumeBuilder';
 
 const LandingPage = () => {
   return (
@@ -23,7 +23,7 @@ const LandingPage = () => {
       <MediaGallary/>
       <SchemeSection/>
       <ChatBot/>
-      <ResumeBuilder/>
+      {/* <ResumeBuilder/> */}
       
       
       

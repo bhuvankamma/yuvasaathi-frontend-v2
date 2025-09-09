@@ -6,11 +6,16 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-gray-300 py-10 md:py-16 mt-12 rounded-t-2xl shadow-inner">
       <div className="container mx-auto px-4">
+        {/*
+          --- UPDATED: Responsive grid layout for better mobile stacking.
+          On mobile, the columns will stack one on top of the other (grid-cols-1).
+          They will then switch to a 2-column layout on small screens (sm:grid-cols-2) and a 4-column layout on large screens (lg:grid-cols-4).
+        */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10 border-b border-gray-700 pb-8">
           
           {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -48,8 +53,8 @@ const Footer = () => {
           </div>
 
           {/* Other Government Portals */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
               Govt. Portals
             </h3>
             <ul className="space-y-3">
@@ -81,22 +86,22 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
               Contact Info
             </h3>
             <address className="not-italic space-y-3">
-              <p className="flex items-center space-x-2 justify-center md:justify-start">
+              <p className="flex items-center space-x-2 justify-center sm:justify-start">
                 <MapPin size={20} className="text-yellow-300" />
                 <span>Patna, Bihar, India</span>
               </p>
-              <p className="flex items-center space-x-2 justify-center md:justify-start">
+              <p className="flex items-center space-x-2 justify-center sm:justify-start">
                 <Mail size={20} className="text-yellow-300" />
                 <a href="mailto:contact@yuvasaathi.bih.nic.in" className="hover:text-yellow-300 transition-colors duration-300">
                   contact@yuvasaathi.bih.nic.in
                 </a>
               </p>
-              <p className="flex items-center space-x-2 justify-center md:justify-start">
+              <p className="flex items-center space-x-2 justify-center sm:justify-start">
                 <Phone size={20} className="text-yellow-300" />
                 <a href="tel:+911234567890" className="hover:text-yellow-300 transition-colors duration-300">
                   +91 12345 67890
@@ -106,13 +111,17 @@ const Footer = () => {
           </div>
 
           {/* Map */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl font-semibold text-teal-400 mb-4 transform transition-transform duration-300 hover:scale-105">
               Our Location
             </h3>
+            {/*
+              --- UPDATED: The map iframe source was invalid. The URL needs to be a valid Google Maps embed URL.
+              I've used a valid placeholder URL format. You must replace this with the actual embed URL for your location.
+            */}
             <div className="w-full h-40 bg-gray-700 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115132.86807897126!2d85.0601614741427!3d25.6119857945037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f29937c52d80d1%3A0x7c83a73c0be16298!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5501865910444!2d85.13840697525359!3d25.613391214041695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f28bbd9f21f061%3A0xc660d23c11a6248c!2sPatna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1691234567890!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -127,7 +136,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="pt-8 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Yuva Saathi, Bihar Government. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Yuva Saathi, Bihar Government. All rights reserved.</p>
         </div>
       </div>
     </footer>
